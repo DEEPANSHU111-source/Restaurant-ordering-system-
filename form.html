@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Oberoi - Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 15px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>THE OBEROI</h2>
+
+    <form method="post">
+        <!-- Name Section -->
+        <label>First Name *</label>
+        <input type="text" name="first_name" required pattern="[A-Za-z]+">
+
+        <label>Middle Name</label>
+        <input type="text" name="middle_name" pattern="[A-Za-z]*">
+
+        <label>Last Name</label>
+        <input type="text" name="last_name" pattern="[A-Za-z]*">
+
+        <!-- Mobile -->
+        <label>Mobile Number *</label>
+        <input type="text" name="mobile" required pattern="[0-9]{10}" placeholder="10 digits">
+
+        <!-- User Type -->
+        <label>User Type</label>
+        <select name="user_type">
+            <option value="new">New User</option>
+            <option value="regular">Regular User</option>
+        </select>
+
+        <!-- Family Pack -->
+        <label>Are you with family?</label>
+        <select name="family">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+
+        <!-- Order -->
+        <label>Your Order (format: 1x2,3x1)</label>
+        <textarea name="order" rows="3" placeholder="Example: 1x2,5x1"></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+</body>
+</html>
